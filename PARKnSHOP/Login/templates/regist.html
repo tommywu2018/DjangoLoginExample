@@ -1,0 +1,22 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<form action="/login/regist/" method="post">
+    {% csrf_token %}
+    <label for="name">name</label>
+    <input id="name" type="text" name="name" >
+    <label for="email">email</label>
+    <input id="email" type="text" name="email" >
+    <label for="password">password </label>
+    <input id="password" type="text" name="password" type="password">
+    <label for="description">description </label>
+    <input id="description" type="text" name="description" type="text">
+    <label for="address">address</label>
+    <input id="address" type="text" name="address" >
+    <input type="submit" value="OK">
+</form>
+<br>
+<a href="/login/login/">登陆</a>
+{% endblock %}
+
